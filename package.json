@@ -14,7 +14,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build  && cp _redirects build/redirects",
+    "build": "react-scripts build && cp _redirects build/_redirects",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
