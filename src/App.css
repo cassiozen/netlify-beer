@@ -1,0 +1,43 @@
+#root {
+  height: 100%;
+}
+
+.App {
+  height: 100%;
+}
+
+h1 {
+  margin: 0;
+  font-size: 90px;
+  color: #f6ecc3;
+  font-family: 'Lobster', Helvetica, sans-serif;
+  font-weight: bold;
+  text-shadow: rgba(0, 0, 0, .2) 3px 3px 3px;
+  -webkit-text-stroke: 1px rgba(225, 114, 0, .6);
+}
+
+.App-header {
+  background-color: #333;
+  height: 105px;
+  border-bottom: solid 6px #c67c12;
+  text-align: center;
+}
+
+.App-logo-separator {
+  font-size: 54px;
+  vertical-align: middle;
+  margin: -12px;
+  opacity: 0.8;
+  text-shadow: rgba(0, 0, 0, .2) 3px 3px 3px;
+}
+
+.App-contents {
+  margin: 15px 10px;
+}
+
+.add-button {
+  position: fixed !important;
+  bottom: 20px;
+  right: 20px;
+  background-color: #c67c12;
+}
