@@ -6,6 +6,8 @@
     "react-scripts": "0.2.2"
   },
   "dependencies": {
+    "md-gum-polyfill": "^1.0.0",
+    "npm": "^3.10.6",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
     "react-router": "^2.7.0",

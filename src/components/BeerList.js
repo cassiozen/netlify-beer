@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
-import { Segment, List, Button, Icon, Image, Loader } from 'stardust';
+import { Card, Button, Icon, Image, Loader, Rating } from 'stardust';
 
 class BeerList extends Component {
   handleNew = () => {
@@ -11,22 +11,27 @@ class BeerList extends Component {
     const {fetchingData, beers} = this.props;
     return (
       <div>
-        <Segment>
+        <Card.Group>
           { fetchingData?
-            <div>
-              <div className='ui active dimmer'>
-                <Loader>Loading</Loader>
-              </div>
-              <Image src='http://semantic-ui.com/images/wireframe/short-paragraph.png' />
+            <div className='ui active dimmer'>
+              <Loader>Loading</Loader>
             </div>
           :
-          <List className='relaxed divided'>
-            {beers.map(beer => (
-              <List.Item key={beer.id} header={beer.name} description={`${beer.style} -  ${beer.rating} stars.`} />
-            ))}
-          </List>
-          }
-        </Segment>
+          beers.map(beer => (
+            <Card>
+              <Image src={'https://s3.amazonaws.com/sls-beer8/'+beer.picture} />
+              <Card.Content>
+                <Card.Header>{beer.name}</Card.Header>
+                <Card.Meta>{beer.style}</Card.Meta>
+                <Card.Description>
+                  <Rating defaultRating={beer.rating} maxRating={5} disabled />
+                </Card.Description>
+              </Card.Content>
+            </Card>
+          ))
+        }
+        </Card.Group>
+
         <Button className='add-button orange animated' onClick={this.handleNew}>
           <div className='visible content'><Icon name='bar' /></div>
           <div className='hidden content'><Icon name='plus'/></div>
