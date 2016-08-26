@@ -18,8 +18,8 @@ class BeerList extends Component {
             </div>
           :
           beers.map(beer => (
-            <Card>
-              <Image src={'https://s3.amazonaws.com/sls-beer8/'+beer.picture} />
+            <Card key={beer.id}>
+              <Image src={'https://s3.amazonaws.com/slsbeer/'+beer.picture} />
               <Card.Content>
                 <Card.Header>{beer.name}</Card.Header>
                 <Card.Meta>{beer.style}</Card.Meta>
@@ -47,6 +47,8 @@ export default withRouter(BeerList);
 
 // PropTypes
 BeerList.propTypes = {
+  fetchingData: React.PropTypes.bool,
+  beers: React.PropTypes.array.isRequired,
   router: React.PropTypes.shape({
     push: React.PropTypes.func.isRequired
   }).isRequired

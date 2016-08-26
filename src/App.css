@@ -23,14 +23,6 @@ h1 {
   text-align: center;
 }
 
-.App-logo-separator {
-  font-size: 54px;
-  vertical-align: middle;
-  margin: -12px;
-  opacity: 0.8;
-  text-shadow: rgba(0, 0, 0, .2) 3px 3px 3px;
-}
-
 .App-contents {
   margin: 15px 10px;
 }

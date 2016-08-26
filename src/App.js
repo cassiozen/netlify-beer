@@ -3,7 +3,7 @@ import { withRouter } from 'react-router';
 import 'semantic-ui-css/semantic.css';
 import './App.css';
 
-const apiBasePath = 'https://uzxg7c851g.execute-api.us-east-1.amazonaws.com/dev';
+const apiBasePath = 'https://ms5k2v1858.execute-api.us-east-1.amazonaws.com/dev';
 
 const fetchJson = (url, config) => {
   return fetch(apiBasePath + url,{
@@ -71,7 +71,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>🍺SLS<span className="App-logo-separator">⚡</span>Beer</h1>
+          <h1>🍺SLS Beer</h1>
         </header>
 
         <div className="App-contents">
